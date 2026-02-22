@@ -1,0 +1,12 @@
+name: Feature request
+description: Proponer mejora o contenido
+labels: [enhancement]
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Descripción de la propuesta
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivación/beneficio

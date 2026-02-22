@@ -1,0 +1,20 @@
+name: Bug report
+description: Reportar un error
+labels: [bug]
+body:
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamiento esperado
+  - type: textarea
+    id: actual
+    attributes:
+      label: Comportamiento actual
+  - type: textarea
+    id: steps
+    attributes:
+      label: Pasos para reproducir
+  - type: input
+    id: url
+    attributes:
+      label: URL (si aplica)
