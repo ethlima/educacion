@@ -7,7 +7,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Ethereum Lima — Educación',
   tagline: 'Documentación y recursos de la comunidad Ethereum Lima',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.webp',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -44,21 +44,8 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           editUrl: 'https://github.com/ethlima/educacion/tree/main/',
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        // Disable blog routes entirely
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -76,7 +63,7 @@ const config: Config = {
       title: 'Ethereum Lima',
       logo: {
         alt: 'Ethereum Lima',
-        src: 'img/logo.svg',
+        src: 'img/logo.webp',
       },
       items: [
         {
@@ -85,7 +72,6 @@ const config: Config = {
           position: 'left',
           label: 'Docs',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://github.com/ethlima/educacion',
           label: 'GitHub',
@@ -110,7 +96,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/ethlima/educacion',
+              href: 'https://github.com/ethlima',
             },
             {
               label: 'Ethereum Lima',
@@ -118,17 +104,13 @@ const config: Config = {
             },
             {
               label: 'X',
-              href: 'https://x.com/ethlima',
+              href: 'https://x.com/EthereumLima',
             },
           ],
         },
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/ethlima/educacion',
