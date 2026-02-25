@@ -4,7 +4,7 @@ slug: que-es-blockchain
 sidebar_position: 1
 authors:
   - username: javierarteagagonzales
-    name: Jargo
+    name: Javier Arteaga Gonzales
 ---
 
 # ¿Qué es Blockchain?

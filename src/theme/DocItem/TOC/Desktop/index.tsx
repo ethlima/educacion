@@ -5,13 +5,11 @@ import TOC from '@theme/TOC';
 
 import styles from './styles.module.css';
 
-export default function DocItemTOCDesktop(props: any): JSX.Element | null {
+export default function DocItemTOC(props: any) {
   const {metadata} = useDoc();
-
-  // ✅ TOC siempre array
   const toc = Array.isArray(props?.toc) ? props.toc : [];
 
-  // Si no hay toc ni editUrl, no muestres nada
+  // Si no hay TOC y no hay editUrl, no mostramos nada
   if (toc.length === 0 && !metadata?.editUrl) return null;
 
   return (
@@ -22,7 +20,6 @@ export default function DocItemTOCDesktop(props: any): JSX.Element | null {
         </div>
       ) : null}
 
-      {/* ✅ Solo renderiza TOC si hay items */}
       {toc.length > 0 ? <TOC {...props} toc={toc} /> : null}
     </div>
   );
