@@ -1,0 +1,65 @@
+.header {
+  margin-bottom: 1rem;
+}
+
+.titleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.title {
+  margin-bottom: 0.25rem;
+}
+
+.editBtn :global(.theme-edit-this-page) {
+  white-space: nowrap;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 0.4rem;
+  opacity: 0.9;
+}
+
+.authors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.author {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  text-decoration: none;
+}
+
+.avatar {
+  width: 22px;
+  height: 22px;
+  border-radius: 999px;
+}
+
+.authorName {
+  font-size: 0.95rem;
+}
+
+.updated {
+  font-size: 0.95rem;
+}
+
+.updatedLabel {
+  opacity: 0.8;
+}
+
+.authorUser {
+  margin-left: 0.45rem;
+  opacity: 0.7;
+  font-size: 0.9em;
+}

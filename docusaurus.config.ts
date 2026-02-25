@@ -53,6 +53,43 @@ const config: Config = {
     ],
   ],
 
+
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'formacion',
+        path: 'formacion',
+        routeBasePath: 'formacion',
+        sidebarPath: require.resolve('./sidebarsFormacion.ts'),
+        editUrl: 'https://github.com/ethlima/educacion/tree/main/',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'cursos',
+        path: 'cursos',
+        routeBasePath: 'cursos',
+        sidebarPath: require.resolve('./sidebarsCursos.ts'),
+        editUrl: 'https://github.com/ethlima/educacion/tree/main/',
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'contribuir',
+        path: 'contribuir',
+        routeBasePath: 'contribuir',
+        sidebarPath: require.resolve('./sidebarsContribuir.ts'),
+        editUrl: 'https://github.com/ethlima/educacion/tree/main/',
+      },
+    ],
+  ],
+
+
   themeConfig: {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
@@ -66,11 +103,32 @@ const config: Config = {
         src: 'img/logo.webp',
       },
       items: [
-        {
+       /* {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Docs',
+        },*/
+        {
+          type: 'docSidebar',
+          docsPluginId: 'formacion',
+          sidebarId: 'defaultSidebar',
+          position: 'left',
+          label: 'Formación',
+        },
+        {
+          type: 'docSidebar',
+          docsPluginId: 'cursos',
+          sidebarId: 'defaultSidebar',
+          position: 'left',
+          label: 'Cursos',
+        },
+        {
+          type: 'docSidebar',
+          docsPluginId: 'contribuir',
+          sidebarId: 'defaultSidebar',
+          position: 'left',
+          label: 'Contribuir',
         },
         {
           href: 'https://github.com/ethlima/educacion',
