@@ -22,7 +22,7 @@ Queremos que quienes aportan puedan crecer con el proyecto y participar más act
 
 ## Proceso
 1. Haz tu primera contribución (PR mergeado)
-2. Pide que te agreguemos a la lista en **[Contributors](./contributors)**
+2. Pide que te agreguemos a la lista en **[Contributors](./contribuir/contributors)**
 3. Opcional: propón una sección o tema donde te gustaría ayudar
 
 ## Roles
