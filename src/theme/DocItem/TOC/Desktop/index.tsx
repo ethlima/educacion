@@ -5,13 +5,11 @@ import TOC from '@theme/TOC';
 
 import styles from './styles.module.css';
 
-export default function DocItemTOC(props: any): JSX.Element | null {
+export default function DocItemTOCDesktop(props: any): JSX.Element | null {
   const {metadata} = useDoc();
   const toc = props?.toc ?? [];
 
-  if ((!toc || toc.length === 0) && !metadata?.editUrl) {
-    return null;
-  }
+  if ((!toc || toc.length === 0) && !metadata?.editUrl) return null;
 
   return (
     <div className={styles.tocWrapper}>
@@ -20,7 +18,6 @@ export default function DocItemTOC(props: any): JSX.Element | null {
           <EditThisPage editUrl={metadata.editUrl} />
         </div>
       ) : null}
-
       <TOC {...props} />
     </div>
   );
