@@ -6,17 +6,12 @@ authors:
   - username: javierarteagagonzales
     name: Javier Arteaga Gonzales
 
-hide_table_of_contents: false
-toc_min_heading_level: 2
-toc_max_heading_level: 3
+
 ---
 
 # ¿Qué es Blockchain?
 
 Blockchain es una **base de datos compartida** (distribuida) donde muchas computadoras mantienen el mismo historial de información, y donde cambiar el pasado es **difícil** porque el sistema está diseñado para **verificar** y **encadenar** los datos.
-
-## TOC Test
-Texto.
 
 ## Objetivos de aprendizaje
 - Entender qué problema resuelve blockchain y qué no.
