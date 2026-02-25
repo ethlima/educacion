@@ -29,3 +29,22 @@
   --ifm-color-primary-lightest: #E7F1F7;/* ~90% lighter */
   --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.08);
 }
+
+
+
+/* =========================================================
+   FORCE TOC RIGHT COLUMN (Desktop)
+   ========================================================= */
+@media (min-width: 997px) {
+  /* Asegura que el TOC desktop no esté oculto */
+  .theme-doc-toc-desktop {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  /* Por si algún CSS lo estaba colapsando */
+  .col--3 {
+    min-width: 260px;
+  }
+}

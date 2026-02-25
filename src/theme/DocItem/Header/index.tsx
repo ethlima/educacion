@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Heading from '@theme/Heading';
 import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import styles from './styles.module.css';
@@ -28,7 +28,13 @@ function normalizeAuthors(a: any): {username: string; name?: string}[] {
 
 function Avatar({username}: {username: string}) {
   return (
-    <a className={styles.avatarLink} href={`https://github.com/${username}`} target="_blank" rel="noreferrer">
+    <a
+      className={styles.avatarLink}
+      href={`https://github.com/${username}`}
+      target="_blank"
+      rel="noreferrer"
+      title={`@${username}`}
+    >
       <img className={styles.avatar} src={`https://github.com/${username}.png?size=80`} alt={`@${username}`} />
     </a>
   );
@@ -41,8 +47,6 @@ export default function DocItemHeader() {
   const fm = frontMatter as any;
   const authors = normalizeAuthors(fm?.authors as Author[] | undefined);
   const lastUpdated = formatEsPE(metadata?.lastUpdatedAt);
-
-  const [open, setOpen] = useState(false);
 
   return (
     <header className={styles.header}>
@@ -64,20 +68,7 @@ export default function DocItemHeader() {
             ))}
             {authors.length > 3 ? <span className={styles.more}>+{authors.length - 3}</span> : null}
           </div>
-
-          <button type="button" className={styles.see} onClick={() => setOpen((v) => !v)}>
-            Ver colaboradores
-          </button>
-
-          {open ? (
-            <div className={styles.popover}>
-              {authors.map((a) => (
-                <a key={a.username} className={styles.popItem} href={`https://github.com/${a.username}`} target="_blank" rel="noreferrer">
-                  @{a.username}
-                </a>
-              ))}
-            </div>
-          ) : null}
+          <span className={styles.see}>Ver colaboradores</span>
         </div>
       ) : null}
     </header>
