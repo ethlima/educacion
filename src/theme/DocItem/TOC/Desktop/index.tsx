@@ -7,9 +7,12 @@ import styles from './styles.module.css';
 
 export default function DocItemTOCDesktop(props: any): JSX.Element | null {
   const {metadata} = useDoc();
-  const toc = props?.toc ?? [];
 
-  if ((!toc || toc.length === 0) && !metadata?.editUrl) return null;
+  // ✅ TOC siempre array
+  const toc = Array.isArray(props?.toc) ? props.toc : [];
+
+  // Si no hay toc ni editUrl, no muestres nada
+  if (toc.length === 0 && !metadata?.editUrl) return null;
 
   return (
     <div className={styles.tocWrapper}>
@@ -18,7 +21,9 @@ export default function DocItemTOCDesktop(props: any): JSX.Element | null {
           <EditThisPage editUrl={metadata.editUrl} />
         </div>
       ) : null}
-      <TOC {...props} />
+
+      {/* ✅ Solo renderiza TOC si hay items */}
+      {toc.length > 0 ? <TOC {...props} toc={toc} /> : null}
     </div>
   );
 }
