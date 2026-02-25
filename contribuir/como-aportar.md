@@ -1,31 +1,66 @@
 ---
 title: Cómo aportar
-slug: como-aportar
+slug: /como-aportar
 sidebar_position: 2
 ---
 
 # Cómo aportar
 
-Este proyecto es open source: contribuciones por PR y issues.
+Esta guía te explica el proceso completo para subir contenido o mejoras al repositorio.
 
-## Formas de contribuir
-- Correcciones (typos, claridad, ejemplos)
-- Nuevos módulos o labs
-- Traducciones y mejoras de UX
-- Reporte de bugs / sugerencias
+## Requisitos
+- Cuenta en **GitHub**
+- Conocimientos básicos de edición Markdown (puedes aprenderlo rápido)
+- Si harás cambios grandes: tener Node instalado para correr el build
 
-## Flujo (rápido)
-1. Fork del repo
-2. Crea una rama: `feat/...` o `fix/...`
-3. Haz cambios
-4. Abre Pull Request
-5. Revisión + merge
+---
 
-## Checklist de PR
-- [ ] Buen título
-- [ ] Explica el cambio y motivación
-- [ ] Links o screenshots si aplica
-- [ ] No rompe rutas
+## Tipos de contribución
 
-## Siguiente paso
-Revisa **Estilo de redacción**
+### 1) Cambios pequeños (rápidos)
+Ideal para:
+- typos
+- mejorar claridad
+- arreglar links
+- mejorar un ejemplo corto
+
+**Recomendado:** editar desde GitHub (sin instalar nada).
+1. Abre el archivo en GitHub
+2. Haz clic en **Edit** (ícono del lápiz)
+3. Realiza el cambio
+4. Crea un Pull Request
+
+> El equipo revisa y te pide ajustes si hicieran falta.
+
+---
+
+### 2) Cambios medianos o grandes (contenido nuevo / labs)
+Ideal para:
+- nuevos documentos
+- labs completos
+- reestructuras
+
+#### Paso 1: Proponer (recomendado)
+Antes de escribir mucho, crea un Issue o comenta qué harás:
+- objetivo del contenido
+- dónde irá (Formación / Contribuir)
+- alcance (1 doc o varios)
+- referencias (si aplica)
+
+#### Paso 2: Fork + rama
+1. Haz Fork del repositorio
+2. Clona tu fork en local
+3. Crea una rama:
+   - `feat/<tema>`
+   - `fix/<tema>`
+
+#### Paso 3: Escribir siguiendo estándares
+Antes de abrir PR:
+- usa la **[Estructura mínima](./estructura-minima)**
+- sigue el **[Estilo de redacción](./estilo-redaccion)**
+
+#### Paso 4: Validar build (muy importante)
+En tu máquina:
+```bash
+npm install
+npm run build

@@ -85,6 +85,8 @@ const config: Config = {
         routeBasePath: 'cursos',
         sidebarPath: require.resolve('./sidebarsCursos.ts'),
         editUrl: 'https://github.com/ethlima/educacion/tree/block/',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
     [
@@ -95,6 +97,8 @@ const config: Config = {
         routeBasePath: 'contribuir',
         sidebarPath: require.resolve('./sidebarsContribuir.ts'),
         editUrl: 'https://github.com/ethlima/educacion/tree/block/',
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
       },
     ],
   ],
