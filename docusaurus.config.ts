@@ -9,6 +9,11 @@ const config: Config = {
   tagline: 'Documentación y recursos de la comunidad Ethereum Lima',
   favicon: 'img/favicon.webp',
 
+  // ✅ Aquí va trailingSlash (nivel raíz)
+  trailingSlash: false,
+
+
+
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
     v4: true, // Improve compatibility with the upcoming Docusaurus v4
@@ -28,6 +33,13 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
 
+
+  markdown: {
+  hooks: {
+    onBrokenMarkdownLinks: 'throw',
+    },
+  },
+
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
@@ -40,11 +52,9 @@ const config: Config = {
     [
       'classic',
       {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/ethlima/educacion/tree/main/',
-        },
+        
         // Disable blog routes entirely
+        docs : false,
         blog: false,
         theme: {
           customCss: './src/css/custom.css',
@@ -62,7 +72,7 @@ const config: Config = {
         path: 'formacion',
         routeBasePath: 'formacion',
         sidebarPath: require.resolve('./sidebarsFormacion.ts'),
-        editUrl: 'https://github.com/ethlima/educacion/tree/main/',
+        editUrl: 'https://github.com/ethlima/educacion/tree/block/',
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
       },
@@ -74,7 +84,7 @@ const config: Config = {
         path: 'cursos',
         routeBasePath: 'cursos',
         sidebarPath: require.resolve('./sidebarsCursos.ts'),
-        editUrl: 'https://github.com/ethlima/educacion/tree/main/',
+        editUrl: 'https://github.com/ethlima/educacion/tree/block/',
       },
     ],
     [
@@ -84,7 +94,7 @@ const config: Config = {
         path: 'contribuir',
         routeBasePath: 'contribuir',
         sidebarPath: require.resolve('./sidebarsContribuir.ts'),
-        editUrl: 'https://github.com/ethlima/educacion/tree/main/',
+        editUrl: 'https://github.com/ethlima/educacion/tree/block/',
       },
     ],
   ],
@@ -146,11 +156,11 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Formación',
           items: [
             {
-              label: 'Introducción',
-              to: '/docs/intro',
+              label: 'Inicio',
+              to: '/formacion/intro',
             },
           ],
         },
