@@ -1,3 +1,4 @@
+// src/theme/DocItem/TOC/Desktop/index.tsx
 import React from 'react';
 import {useDoc} from '@docusaurus/plugin-content-docs/client';
 import EditThisPage from '@theme/EditThisPage';
@@ -7,9 +8,15 @@ import styles from '../styles.module.css';
 
 export default function DocItemTOCDesktop(props: any) {
   const {metadata} = useDoc();
-  const toc = Array.isArray(props?.toc) ? props.toc : [];
 
-  if (toc.length === 0 && !metadata?.editUrl) {
+  // ✅ Docusaurus v3 suele usar tocItems, pero soportamos ambos
+  const tocItems = Array.isArray(props?.tocItems)
+    ? props.tocItems
+    : Array.isArray(props?.toc)
+      ? props.toc
+      : [];
+
+  if (tocItems.length === 0 && !metadata?.editUrl) {
     return null;
   }
 
@@ -21,7 +28,8 @@ export default function DocItemTOCDesktop(props: any) {
         </div>
       ) : null}
 
-      {toc.length > 0 ? <TOC {...props} toc={toc} /> : null}
+      {/* ✅ TOC en v3 espera tocItems */}
+      {tocItems.length > 0 ? <TOC {...props} tocItems={tocItems} /> : null}
     </div>
   );
 }

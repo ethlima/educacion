@@ -96,12 +96,22 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
+
+    tableOfContents: {
+        minHeadingLevel: 2,
+        maxHeadingLevel: 3,
+    },
+
+
+
     navbar: {
       title: 'Ethereum Lima',
       logo: {
         alt: 'Ethereum Lima',
         src: 'img/logo.webp',
       },
+
+
       items: [
        /* {
           type: 'docSidebar',
