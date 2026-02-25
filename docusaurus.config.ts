@@ -16,10 +16,10 @@ const config: Config = {
 
   // Set the production url of your site here
   // TODO: set to the final production URL (e.g. https://educacion.ethlima.org or https://ethlima.github.io)
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://ethlima.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+  baseUrl: '/educacion/',
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
