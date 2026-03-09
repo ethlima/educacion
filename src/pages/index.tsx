@@ -24,7 +24,7 @@ function HeroSlider() {
         src: '/img/hero/slide-1.jpg',
         alt: 'Comunidad construyendo en Ethereum',
         eyebrow: 'Comunidad primero',
-        title: 'Ethereum Lima Academy',
+        title: 'Ethereum Lima',
         subtitle: 'Plataforma educativa descentralizada para la próxima generación de builders en Latinoamérica.',
       },
       {

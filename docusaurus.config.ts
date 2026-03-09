@@ -3,7 +3,7 @@ import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
-  title: 'Ethereum Lima Academy',
+  title: 'Ethereum Lima',
   tagline: 'Educación descentralizada desde Lima para el mundo',
   favicon: 'img/favicon.webp',
 
@@ -54,10 +54,7 @@ const config: Config = {
             },
           },
         },
-        blog: {
-          showReadingTime: true,
-          editUrl: 'https://github.com/ethlima/educacion/tree/block/',
-        },
+        blog: false,
         theme: {
           customCss: './src/styles/globals.css',
         },
@@ -85,7 +82,7 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     navbar: {
-      title: 'Academy',
+      title: 'Ethereum Lima',
       logo: {
         alt: 'Ethereum Lima Logo',
         src: 'img/logo.webp',
@@ -109,7 +106,6 @@ const config: Config = {
           position: 'left',
           label: 'Recursos',
         },
-        { to: '/blog', label: 'Blog', position: 'left' },
         {
           type: 'docsVersionDropdown',
           position: 'right',
