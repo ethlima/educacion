@@ -26,10 +26,12 @@ Plataforma educativa descentralizada y colaborativa para el ecosistema Ethereum 
 ## 🛠️ Comandos Disponibles
 
 ### Desarrollo
+
 - `npm run start`: Inicia el servidor de desarrollo en `http://localhost:3000`.
 - `npm run clear`: Limpia la caché de Docusaurus.
 
 ### Calidad y Testing
+
 - `npm run typecheck`: Verifica tipos de TypeScript.
 - `npm run lint`: Ejecuta el linter (ESLint).
 - `npm run format`: Formatea el código con Prettier.
@@ -37,6 +39,7 @@ Plataforma educativa descentralizada y colaborativa para el ecosistema Ethereum 
 - `npm run test:e2e`: Ejecuta tests E2E con Playwright.
 
 ### Build y Producción
+
 - `npm run build`: Genera el sitio estático para producción.
 - `npm run serve`: Previsualiza el build localmente.
 
@@ -47,4 +50,5 @@ Plataforma educativa descentralizada y colaborativa para el ecosistema Ethereum 
 3. Asegúrate de que el CI pase en tu Pull Request.
 
 ---
+
 © ${new Date().getFullYear()} Ethereum Lima. Contenido CC BY 4.0 · Código MIT.

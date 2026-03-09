@@ -11,19 +11,25 @@ author: Contribuidor @ethlima
 # Título de la Lección
 
 ## Objetivos
+
 - [ ] Objetivo 1
 - [ ] Objetivo 2
 
 ## Contenido
+
 Escribe aquí el contenido técnico...
 
 ## Ejercicio Lab (opcional)
+
 Propón un ejercicio práctico...
 
 ## Recursos Adicionales
+
 - [Documentación oficial](https://ethereum.org)
 - [Video de apoyo](https://youtube.com)
+
 ---
+
 :::note[Tip Ethereum Lima]
 Resalta información clave con estos bloques.
 :::

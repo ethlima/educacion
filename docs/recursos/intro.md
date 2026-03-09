@@ -10,7 +10,9 @@ Ethereum Lima — Educación es un proyecto **open source** construido por la co
 Aquí puedes aportar contenido, labs y mejoras que ayuden a más builders a aprender de forma clara y práctica.
 
 ## Antes de empezar
+
 Te recomendamos leer (en este orden):
+
 1. **[Cómo aportar](./como-aportar)** – el paso a paso para subir cambios
 2. **[Estructura mínima](./estructura-minima)** – el estándar de cada documento
 3. **[Estilo de redacción](./estilo-redaccion)** – claridad y consistencia
@@ -21,17 +23,20 @@ Te recomendamos leer (en este orden):
 ## Formas de contribuir
 
 ### 1) Crear o mejorar contenido (principal)
+
 - Nuevos documentos (conceptos, guías, rutas)
 - Mejoras de claridad y ejemplos
 - Labs / ejercicios prácticos
 - Recursos y links verificados
 
 ### 2) Mantenimiento del sitio
+
 - Arreglar links rotos (muy útil)
 - Ajustar slugs o títulos (cuando sea necesario)
 - Reordenar contenidos (con criterio y consistencia)
 
 ### 3) Proponer mejoras (ideas)
+
 - Temas nuevos para Formación/Cursos
 - Propuestas de estructura
 - Reporte de errores o inconsistencias
@@ -39,7 +44,9 @@ Te recomendamos leer (en este orden):
 ---
 
 ## Buenas primeras contribuciones (para empezar rápido)
+
 Si es tu primera vez, empieza por:
+
 - Corregir typos y redacción (PR pequeño)
 - Agregar una sección de **Checklist** a un doc existente
 - Agregar un **Lab** corto (pasos + resultado esperado)
@@ -48,6 +55,7 @@ Si es tu primera vez, empieza por:
 ---
 
 ## ¿Dónde se sube el contenido?
+
 - **Formación**: fundamentos, desarrollo, escalabilidad, especialización
 - **Cursos**: rutas más largas (las armaremos al final)
 - **Contribuir**: guías para colaborar y estándares del repositorio
@@ -55,4 +63,5 @@ Si es tu primera vez, empieza por:
 ---
 
 ## ¿Dudas?
+
 Si no estás seguro por dónde empezar, revisa **[Cómo aportar](./como-aportar)** y crea una propuesta simple.

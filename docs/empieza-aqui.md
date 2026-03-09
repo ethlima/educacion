@@ -13,18 +13,24 @@ Esta es la plataforma oficial de aprendizaje de la comunidad **Ethereum Lima**. 
 Dependiendo de tu nivel actual, te sugerimos seguir uno de estos caminos:
 
 ### 1. Soy nuevo en Cripto/Blockhain
+
 Si quieres entender las bases desde cero, ve a nuestra sección de **Fundamentos**.
+
 - [¿Qué es Blockchain?](/docs/rutas/fundamentos/que-es-blockchain)
 - [¿Qué es Ethereum?](/docs/rutas/fundamentos/que-es-ethereum)
 - [Wallets y Seguridad](/docs/rutas/fundamentos/wallets)
 
 ### 2. Ya soy programador y quiero construir en Ethereum
+
 Si ya tienes experiencia en desarrollo (Web2 o otros), entra directo a la ruta de **Desarrollo**.
+
 - [Introducción a Solidity](/docs/rutas/desarrollo/introduccion-solidity)
 - [Entornos de desarrollo (Foundry/Hardhat)](/docs/rutas/desarrollo/introduccion-solidity)
 
 ### 3. Quiero escalar mis conocimientos
+
 Si ya sabes Solidity y buscas especializarte:
+
 - [Cursos Técnicos](/docs/cursos)
 - [Escalabilidad y L2s](/docs/rutas/escalabilidad/que-son-layer2)
 

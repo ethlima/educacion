@@ -5,7 +5,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import { BookOpen, Code, Share2, Users, LayoutDashboard, Rocket, ChevronRight } from 'lucide-react';
+import { BookOpen, Code, Share2, Users, Rocket, ChevronRight } from 'lucide-react';
 
 type Slide = {
   src: string;
@@ -16,8 +16,6 @@ type Slide = {
 };
 
 function HeroSlider() {
-  const { siteConfig } = useDocusaurusContext();
-
   const slides: Slide[] = useMemo(
     () => [
       {
@@ -25,7 +23,8 @@ function HeroSlider() {
         alt: 'Comunidad construyendo en Ethereum',
         eyebrow: 'Comunidad primero',
         title: 'Ethereum Lima',
-        subtitle: 'Plataforma educativa descentralizada para la próxima generación de builders en Latinoamérica.',
+        subtitle:
+          'Plataforma educativa descentralizada para la próxima generación de builders en Latinoamérica.',
       },
       {
         src: '/img/hero/slide-2.webp',
@@ -39,10 +38,11 @@ function HeroSlider() {
         alt: 'Open source y contribución',
         eyebrow: 'Open Source',
         title: 'Comparte y Contribuye',
-        subtitle: 'Contenido abierto bajo licencia CC BY 4.0, evolucionado por la propia comunidad.',
+        subtitle:
+          'Contenido abierto bajo licencia CC BY 4.0, evolucionado por la propia comunidad.',
       },
     ],
-    []
+    [],
   );
 
   const [active, setActive] = useState(0);
@@ -63,8 +63,8 @@ function HeroSlider() {
         <div
           key={i}
           className={clsx(
-            "absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out scale-105",
-            i === active ? "opacity-100" : "opacity-0"
+            'absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out scale-105',
+            i === active ? 'opacity-100' : 'opacity-0',
           )}
           style={{ backgroundImage: `url(${slide.src})` }}
           role="img"
@@ -75,10 +75,7 @@ function HeroSlider() {
       ))}
 
       <div className="container relative z-10 py-20 max-w-5xl">
-        <div className={clsx(
-          "transition-all duration-700 transform",
-          "opacity-100 translate-y-0"
-        )}>
+        <div className={clsx('transition-all duration-700 transform', 'opacity-100 translate-y-0')}>
           {current.eyebrow && (
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ethlima-blue/20 border border-ethlima-lightBlue/30 text-ethlima-lightBlue text-sm font-semibold mb-6 backdrop-blur-sm">
               <span className="relative flex h-2 w-2">
@@ -89,7 +86,10 @@ function HeroSlider() {
             </div>
           )}
 
-          <Heading as="h1" className="text-white text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6 tracking-tight">
+          <Heading
+            as="h1"
+            className="text-white text-5xl md:text-7xl font-extrabold leading-[1.1] mb-6 tracking-tight"
+          >
             {current.title}
           </Heading>
 
@@ -120,8 +120,8 @@ function HeroSlider() {
             <button
               key={i}
               className={clsx(
-                "h-1.5 transition-all duration-300 rounded-full",
-                i === active ? "w-8 bg-ethlima-lightBlue" : "w-4 bg-slate-600 hover:bg-slate-500"
+                'h-1.5 transition-all duration-300 rounded-full',
+                i === active ? 'w-8 bg-ethlima-lightBlue' : 'w-4 bg-slate-600 hover:bg-slate-500',
               )}
               onClick={() => setActive(i)}
               aria-label={`Slide ${i + 1}`}
@@ -134,23 +134,42 @@ function HeroSlider() {
   );
 }
 
-function FeatureCard({ title, description, icon: Icon, to }: { title: string, description: string, icon: any, to?: string }) {
+function FeatureCard({
+  title,
+  description,
+  icon: Icon,
+  to,
+}: {
+  title: string;
+  description: string;
+  icon: any;
+  to?: string;
+}) {
   const CardContent = (
     <div className="p-8 rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 shadow-sm hover:shadow-xl hover:border-ethlima-blue/30 transition-all group h-full flex flex-col">
       <div className="w-12 h-12 rounded-xl bg-ethlima-blue/10 flex items-center justify-center text-ethlima-blue dark:text-ethlima-lightBlue mb-6 group-hover:scale-110 transition-transform">
         <Icon size={24} />
       </div>
-      <h3 className="text-xl font-bold mb-3 dark:text-white group-hover:text-ethlima-blue transition-colors">{title}</h3>
+      <h3 className="text-xl font-bold mb-3 dark:text-white group-hover:text-ethlima-blue transition-colors">
+        {title}
+      </h3>
       <p className="text-slate-600 dark:text-slate-400 leading-relaxed grow">{description}</p>
       {to && (
         <div className="mt-6 flex items-center text-ethlima-blue font-semibold text-sm">
-          Saber más <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
+          Saber más{' '}
+          <ChevronRight size={16} className="ml-1 group-hover:translate-x-1 transition-transform" />
         </div>
       )}
     </div>
   );
 
-  return to ? <Link to={to} className="no-underline hover:no-underline">{CardContent}</Link> : CardContent;
+  return to ? (
+    <Link to={to} className="no-underline hover:no-underline">
+      {CardContent}
+    </Link>
+  ) : (
+    CardContent
+  );
 }
 
 export default function Home(): ReactNode {
@@ -172,7 +191,8 @@ export default function Home(): ReactNode {
                 Forjando el futuro de <span className="text-ethlima-blue">Web3 en Latam</span>
               </h2>
               <p className="text-slate-600 dark:text-slate-400 text-lg">
-                No somos solo un curso, somos una infraestructura educativa para escalar el conocimiento en Ethereum.
+                No somos solo un curso, somos una infraestructura educativa para escalar el
+                conocimiento en Ethereum.
               </p>
             </div>
             <div className="md:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-6">
