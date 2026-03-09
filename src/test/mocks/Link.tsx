@@ -1,9 +1,13 @@
 import React from 'react';
 
-export default function Link({ to, children, ...props }: any) {
-    return (
-        <a href={to} {...props}>
-            {children}
-        </a>
-    );
+interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+  to: string;
+}
+
+export default function Link({ to, children, ...props }: LinkProps) {
+  return (
+    <a href={to} {...props}>
+      {children}
+    </a>
+  );
 }

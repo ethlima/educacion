@@ -2,10 +2,11 @@ import type { ReactNode } from 'react';
 import React, { useEffect, useMemo, useState } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
-import { BookOpen, Code, Share2, Users, Rocket, ChevronRight } from 'lucide-react';
+import { BookOpen, Code, Share2, Users, Rocket, ChevronRight, type LucideIcon } from 'lucide-react';
 
 type Slide = {
   src: string;
@@ -16,6 +17,9 @@ type Slide = {
 };
 
 function HeroSlider() {
+  const {
+    siteConfig: { baseUrl },
+  } = useDocusaurusContext();
   const slides: Slide[] = useMemo(
     () => [
       {
@@ -59,20 +63,23 @@ function HeroSlider() {
   return (
     <header className="relative overflow-hidden min-h-[85vh] flex items-center bg-slate-900 group">
       {/* Background Image with Transition */}
-      {slides.map((slide, i) => (
-        <div
-          key={i}
-          className={clsx(
-            'absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out scale-105',
-            i === active ? 'opacity-100' : 'opacity-0',
-          )}
-          style={{ backgroundImage: `url(${slide.src})` }}
-          role="img"
-          aria-label={slide.alt}
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-transparent" />
-        </div>
-      ))}
+      {slides.map((slide, i) => {
+        const slideUrl = slide.src.startsWith('/') ? `${baseUrl}${slide.src.slice(1)}` : slide.src;
+        return (
+          <div
+            key={i}
+            className={clsx(
+              'absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out scale-105',
+              i === active ? 'opacity-100' : 'opacity-0',
+            )}
+            style={{ backgroundImage: `url(${slideUrl})` }}
+            role="img"
+            aria-label={slide.alt}
+          >
+            <div className="absolute inset-0 bg-gradient-to-r from-slate-950/90 via-slate-950/60 to-transparent" />
+          </div>
+        );
+      })}
 
       <div className="container relative z-10 py-20 max-w-5xl">
         <div className={clsx('transition-all duration-700 transform', 'opacity-100 translate-y-0')}>
@@ -142,7 +149,7 @@ function FeatureCard({
 }: {
   title: string;
   description: string;
-  icon: any;
+  icon: LucideIcon;
   to?: string;
 }) {
   const CardContent = (
