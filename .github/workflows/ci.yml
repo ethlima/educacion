@@ -1,0 +1,62 @@
+name: CI/CD Ethereum Lima Academy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  quality-check:
+    name: Quality Check (Typecheck + Lint + Test)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Typecheck
+        run: npm run typecheck
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Unit & Integration Tests (Vitest)
+        run: npm run test:unit
+
+  build-and-e2e:
+    name: Build and E2E Smoke Tests
+    needs: quality-check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Docusaurus
+        run: npm run build
+
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: E2E Smoke Tests
+        run: npm run test:e2e
+
+  # Placeholder for deployment (e.g. Vercel or Cloudflare Pages)
+  # deploy:
+  #   name: Deploy Preview/Production
+  #   needs: build-and-e2e
+  #   if: github.event_name == 'push' || github.event_name == 'pull_request'
+  #   ...

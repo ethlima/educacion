@@ -1,7 +1,7 @@
 ---
 title: Cursos
 sidebar_position: 1
-slug: /intro
+slug: /cursos/intro
 ---
 
 # Cursos

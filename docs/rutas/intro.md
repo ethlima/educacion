@@ -1,8 +1,7 @@
 ---
 title: Formación
-slug: /intro
+slug: /rutas/intro
 sidebar_position: 0
-displayed_sidebar: defaultSidebar
 pagination_next: null
 pagination_prev: null
 ---

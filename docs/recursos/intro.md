@@ -1,6 +1,6 @@
 ---
-title: Contribuir
-slug: /intro
+title: Recursos
+slug: /recursos/intro
 sidebar_position: 1
 ---
 
