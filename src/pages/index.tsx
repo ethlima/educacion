@@ -21,21 +21,21 @@ function HeroSlider() {
   const slides: Slide[] = useMemo(
     () => [
       {
-        src: '/img/hero/slide-1.jpg',
+        src: '/img/hero/slide-1.webp',
         alt: 'Comunidad construyendo en Ethereum',
         eyebrow: 'Comunidad primero',
         title: 'Ethereum Lima',
         subtitle: 'Plataforma educativa descentralizada para la próxima generación de builders en Latinoamérica.',
       },
       {
-        src: '/img/hero/slide-2.jpg',
+        src: '/img/hero/slide-2.webp',
         alt: 'Aprendizaje práctico con laboratorios',
         eyebrow: 'Aprendizaje práctico',
         title: 'Aprende Construyendo',
         subtitle: 'Labs, retos y proyectos reales para pasar de la teoría al código en mainnet.',
       },
       {
-        src: '/img/hero/slide-3.jpg',
+        src: '/img/hero/slide-3.webp',
         alt: 'Open source y contribución',
         eyebrow: 'Open Source',
         title: 'Comparte y Contribuye',
