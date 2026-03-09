@@ -2,9 +2,9 @@ name: CI/CD Ethereum Lima Academy
 
 on:
   push:
-    branches: [main]
+    branches: [main, block]
   pull_request:
-    branches: [main]
+    branches: [main, block]
 
 jobs:
   quality-check:

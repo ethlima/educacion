@@ -7,8 +7,8 @@ const config: Config = {
   tagline: 'Educación descentralizada desde Lima para el mundo',
   favicon: 'img/favicon.webp',
 
-  url: 'https://educacion.ethlima.org',
-  baseUrl: '/', // Or '/educacion/' if deploying to GitHub Pages subdirectory
+  url: 'https://ethlima.github.io',
+  baseUrl: '/educacion/', // Set the /<baseUrl>/ pathname under which your site is served
   organizationName: 'ethlima',
   projectName: 'educacion',
 
@@ -42,21 +42,21 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/ethlima/educacion/tree/main/',
+          editUrl: 'https://github.com/ethlima/educacion/tree/block/',
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
           // Content versioning strategy
           lastVersion: 'current',
           versions: {
             current: {
-              label: 'Canary 🐣',
+              label: 'Canary 🧪 (block)',
               path: '',
             },
           },
         },
         blog: {
           showReadingTime: true,
-          editUrl: 'https://github.com/ethlima/educacion/tree/main/',
+          editUrl: 'https://github.com/ethlima/educacion/tree/block/',
         },
         theme: {
           customCss: './src/styles/globals.css',
