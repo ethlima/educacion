@@ -1,6 +1,5 @@
 ---
 title: Convertirte en contributor
-slug: /convertirte-en-contributor
 sidebar_position: 5
 ---
 

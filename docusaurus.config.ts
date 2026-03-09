@@ -23,7 +23,7 @@ const config: Config = {
       headingIds: true,
     },
     hooks: {
-      onBrokenMarkdownLinks: 'warn',
+      onBrokenMarkdownLinks: 'throw',
     },
   },
 

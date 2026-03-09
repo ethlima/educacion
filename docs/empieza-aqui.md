@@ -21,7 +21,7 @@ Si quieres entender las bases desde cero, ve a nuestra sección de **Fundamentos
 ### 2. Ya soy programador y quiero construir en Ethereum
 Si ya tienes experiencia en desarrollo (Web2 o otros), entra directo a la ruta de **Desarrollo**.
 - [Introducción a Solidity](/docs/rutas/desarrollo/introduccion-solidity)
-- [Entornos de desarrollo (Foundry/Hardhat)](/docs/rutas/desarrollo/entornos-desarrollo)
+- [Entornos de desarrollo (Foundry/Hardhat)](/docs/rutas/desarrollo/introduccion-solidity)
 
 ### 3. Quiero escalar mis conocimientos
 Si ya sabes Solidity y buscas especializarte:

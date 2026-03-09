@@ -1,6 +1,5 @@
 ---
 title: Estilo de redacción
-slug: /estilo-redaccion
 sidebar_position: 4
 ---
 

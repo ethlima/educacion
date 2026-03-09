@@ -1,6 +1,5 @@
 ---
 title: Cómo aportar
-slug: /como-aportar
 sidebar_position: 2
 ---
 
