@@ -1,7 +1,7 @@
 ---
 title: Introducción a Smart Contracts
 slug: intro-smart-contracts
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Introducción a Smart Contracts

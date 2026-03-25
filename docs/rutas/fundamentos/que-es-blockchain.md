@@ -1,7 +1,7 @@
 ---
 title: ¿Qué es Blockchain?
 slug: que-es-blockchain
-sidebar_position: 1
+sidebar_position: 2
 authors:
   - name: Javier Arteaga Gonzales
     url: https://github.com/javierarteagagonzales

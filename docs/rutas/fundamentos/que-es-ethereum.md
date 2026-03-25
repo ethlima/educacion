@@ -1,7 +1,7 @@
 ---
 title: ¿Qué es Ethereum?
 slug: que-es-ethereum
-sidebar_position: 2
+sidebar_position: 3
 ---
 
 # ¿Qué es Ethereum?

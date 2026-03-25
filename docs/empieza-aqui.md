@@ -8,9 +8,17 @@ slug: /empieza-aqui
 
 Esta es la plataforma oficial de aprendizaje de la comunidad **Ethereum Lima**. Aquí encontrarás rutas estructuradas, cursos técnicos y recursos curados para convertirte en un constructor (builder) del ecosistema Ethereum.
 
-## 🚀 ¿Por dónde empezar?
+Además, contamos con una serie de formaciones a las que te invitamos a acceder. Revisa esta serie de enlaces para complementar tu estudio:
 
-Dependiendo de tu nivel actual, te sugerimos seguir uno de estos caminos:
+<div style={{margin: '2rem 0'}}>
+  <a className="button button--primary button--lg" href="/docs/rutas/fundamentos/formaciones">
+    Ver Formaciones Recomendadas
+  </a>
+</div>
+
+## 🚀 ¿Por dónde empezar en la plataforma?
+
+Dependiendo de tu nivel actual, te sugerimos seguir uno de estos caminos en la plataforma (iremos agregando más contenido poco a poco):
 
 ### 1. Soy nuevo en Cripto/Blockhain
 
@@ -37,7 +45,7 @@ Si ya sabes Solidity y buscas especializarte:
 ## 🤝 Cómo usar este sitio
 
 - **Barra Lateral (Sidebar)**: A la izquierda encontrarás el índice de contenidos de la sección actual.
-- **Buscador**: Usa el atajo `Ctrl + K` (o `Cmd + K`) para encontrar temas específicos.
+
 - **Contribuciones**: Todo este sitio es **Open Source**. Si encuentras un error o quieres mejorar una lección, puedes hacerlo enviando un Pull Request en [GitHub](https://github.com/ethlima/educacion).
 
 ---
