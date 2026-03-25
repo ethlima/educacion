@@ -1,6 +1,6 @@
 ---
 title: Learning Paths
-slug: learning-paths
+slug: learning-path
 sidebar_position: 0
 ---
 
