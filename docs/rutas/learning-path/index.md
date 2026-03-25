@@ -1,6 +1,6 @@
 ---
 title: Learning Paths
-slug: learning-path
+slug: /rutas/learning-path
 sidebar_position: 0
 ---
 
