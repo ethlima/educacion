@@ -6,4 +6,4 @@ sidebar_position: 1
 
 # Introducción a Solidity
 
-(Contenido por completar)
+Muy pronto subiremos contenido sobre este tema.

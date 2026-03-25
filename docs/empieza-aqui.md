@@ -11,8 +11,8 @@ Esta es la plataforma oficial de aprendizaje de la comunidad **Ethereum Lima**. 
 Además, contamos con una serie de formaciones a las que te invitamos a acceder. Revisa esta serie de enlaces para complementar tu estudio:
 
 <div style={{margin: '2rem 0'}}>
-  <a className="button button--primary button--lg" href="/docs/rutas/fundamentos/formaciones">
-    Ver Formaciones Recomendadas
+  <a className="button button--primary button--lg" href="/docs/rutas/learning-path">
+    Ver Learning Paths
   </a>
 </div>
 

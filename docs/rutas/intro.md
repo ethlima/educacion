@@ -10,6 +10,7 @@ pagination_prev: null
 
 Ruta educativa: **Learn → Build → Contribute**.
 
+- Learning Path: [Learning Path](/docs/rutas/learning-path)
 - Nuevo en Web3: empieza por **Fundamentos**
 - Ya programas: entra a **Desarrollo**
 - Te interesan L2: revisa **Escalabilidad**

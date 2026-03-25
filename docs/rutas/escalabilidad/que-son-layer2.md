@@ -6,4 +6,4 @@ sidebar_position: 1
 
 # ¿Qué son las Layer 2?
 
-(Contenido por completar)
+Muy pronto subiremos contenido sobre este tema.
