@@ -77,3 +77,15 @@ En tu máquina:
 npm install
 npm run build
 ```
+
+---
+
+## 📣 Qué hacer después de enviar tu Pull Request
+
+Una vez que hayas creado tu Pull Request en GitHub (ya sea para un cambio pequeño o grande), te pedimos que nos avises para agilizar la revisión:
+
+1. Únete al **Discord de Ethereum Lima**.
+2. Ingresa al canal **`#contributor`**.
+3. Envía un mensaje saludando y compartiendo el enlace de tu Pull Request.
+
+¡Estaremos felices de revisar tu aporte y agradecerte!
