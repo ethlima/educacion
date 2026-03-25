@@ -8,7 +8,7 @@ const config: Config = {
   favicon: 'img/favicon.webp',
 
   url: 'https://ethlima.github.io',
-  baseUrl: '/educacion/', // Set the /<baseUrl>/ pathname under which your site is served
+  baseUrl: '/', 
   organizationName: 'ethlima',
   projectName: 'educacion',
 
