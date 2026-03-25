@@ -12,10 +12,10 @@ Rutas de aprendizaje con temas especificos por nivel. Para charlas mensuales de 
 
 | # | Learning Path | Niveles | Total temas |
 |---|---|---|---|
-| 1 | [Web3 Developer (Solidity)](web3-developer) | Basico (8) → Intermedio (10) → Avanzado (10) | 28 |
-| 2 | [Arbitrum & Stylus (Rust)](arbitrum-stylus) | Basico (4) → Intermedio (4) → Avanzado (6) | 14 |
-| 3 | [AI + Blockchain](ai-blockchain) | Basico (3) → Intermedio (3) → Avanzado (3) | 9 |
-| 4 | [Seguridad Web3](seguridad) | Basico (3) → Intermedio (3) → Avanzado (3) | 9 |
+| 1 | [Web3 Developer (Solidity)](./web3-developer.md) | Basico (8) → Intermedio (10) → Avanzado (10) | 28 |
+| 2 | [Arbitrum & Stylus (Rust)](./arbitrum-stylus.md) | Basico (4) → Intermedio (4) → Avanzado (6) | 14 |
+| 3 | [AI + Blockchain](./ai-blockchain.md) | Basico (3) → Intermedio (3) → Avanzado (3) | 9 |
+| 4 | [Seguridad Web3](./seguridad.md) | Basico (3) → Intermedio (3) → Avanzado (3) | 9 |
 
 ## Tabla general de niveles
 
