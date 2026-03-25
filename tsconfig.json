@@ -1,8 +1,23 @@
 {
-  // This file is not used in compilation. It is here just for a nice editor experience.
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
-    "baseUrl": "."
+    "baseUrl": ".",
+    "jsx": "react-jsx",
+    "lib": ["DOM", "ES2022"],
+    "types": ["node", "react", "react-dom", "vitest/globals", "@testing-library/jest-dom"],
+    "paths": {
+      "@site/*": ["./*"],
+      "@src/*": ["./src/*"],
+      "@theme/*": ["./src/theme/*", ".docusaurus/theme-classic/theme/*"]
+    }
   },
-  "exclude": [".docusaurus", "build"]
+  "include": [
+    "src/**/*",
+    "docs/**/*",
+    "blog/**/*",
+    "tests/**/*",
+    "docusaurus.config.ts",
+    "sidebars.ts"
+  ],
+  "exclude": [".docusaurus", "build", "node_modules"]
 }

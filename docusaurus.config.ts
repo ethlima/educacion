@@ -1,39 +1,39 @@
-import {themes as prismThemes} from 'prism-react-renderer';
-import type {Config} from '@docusaurus/types';
+import { themes as prismThemes } from 'prism-react-renderer';
+import type { Config } from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
-  title: 'Ethereum Lima — Educación',
-  tagline: 'Documentación y recursos de la comunidad Ethereum Lima',
+  title: 'Ethereum Lima',
+  tagline: 'Educación descentralizada desde Lima para el mundo',
   favicon: 'img/favicon.webp',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
-  future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
-  },
-
-  // Set the production url of your site here
-  // TODO: set to the final production URL (e.g. https://educacion.ethlima.org or https://ethlima.github.io)
-  url: 'https://your-docusaurus-site.example.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'ethlima', // Usually your GitHub org/user name.
-  projectName: 'educacion', // Usually your repo name.
+  url: 'https://ethlima.github.io',
+  baseUrl: '/educacion/', // Set the /<baseUrl>/ pathname under which your site is served
+  organizationName: 'ethlima',
+  projectName: 'educacion',
 
   onBrokenLinks: 'throw',
+  markdown: {
+    format: 'detect',
+    mermaid: false,
+    preprocessor: undefined,
+    mdx1Compat: {
+      admonitions: true,
+      comments: true,
+      headingIds: true,
+    },
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
+  },
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: 'es',
     locales: ['es'],
+  },
+
+  future: {
+    v4: true,
   },
 
   presets: [
@@ -42,35 +42,74 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/ethlima/educacion/tree/main/',
+          editUrl: 'https://github.com/ethlima/educacion/tree/block/',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
+          // Content versioning strategy
+          lastVersion: 'current',
+          versions: {
+            current: {
+              label: 'Canary 🧪 (block)',
+              path: '',
+            },
+          },
         },
-        // Disable blog routes entirely
         blog: false,
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: './src/styles/globals.css',
         },
       } satisfies Preset.Options,
     ],
   ],
 
+  plugins: [
+    async function tailwindPlugin(context, options) {
+      return {
+        name: 'docusaurus-tailwindcss',
+        configurePostCss(postcssOptions) {
+          postcssOptions.plugins.push(require('tailwindcss'));
+          postcssOptions.plugins.push(require('autoprefixer'));
+          return postcssOptions;
+        },
+      };
+    },
+  ],
+
   themeConfig: {
-    // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     colorMode: {
+      defaultMode: 'dark',
       respectPrefersColorScheme: true,
     },
     navbar: {
       title: 'Ethereum Lima',
       logo: {
-        alt: 'Ethereum Lima',
+        alt: 'Ethereum Lima Logo',
         src: 'img/logo.webp',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'rutasSidebar',
           position: 'left',
-          label: 'Docs',
+          label: 'Rutas',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'cursosSidebar',
+          position: 'left',
+          label: 'Cursos',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'recursosSidebar',
+          position: 'left',
+          label: 'Recursos',
+        },
+        {
+          type: 'docsVersionDropdown',
+          position: 'right',
+          dropdownActiveClassDisabled: true,
         },
         {
           href: 'https://github.com/ethlima/educacion',
@@ -83,42 +122,28 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Educación',
           items: [
-            {
-              label: 'Introducción',
-              to: '/docs/intro',
-            },
+            { label: 'Empieza Aquí', to: '/docs/empieza-aqui' },
+            { label: 'Rutas de Aprendizaje', to: '/docs/rutas/intro' },
           ],
         },
         {
-          title: 'Community',
+          title: 'Comunidad',
           items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/ethlima',
-            },
-            {
-              label: 'Ethereum Lima',
-              href: 'https://ethlima.org',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/EthereumLima',
-            },
+            { label: 'Ethereum Lima', href: 'https://ethlima.org' },
+            { label: 'X (Twitter)', href: 'https://x.com/EthereumLima' },
+            { label: 'GitHub', href: 'https://github.com/ethlima' },
           ],
         },
         {
-          title: 'More',
+          title: 'Legal',
           items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/ethlima/educacion',
-            },
+            { label: 'Licencia CC BY 4.0', href: 'https://creativecommons.org/licenses/by/4.0/' },
           ],
         },
       ],
-      copyright: `Contenido CC BY 4.0 · Código MIT — Copyright © ${new Date().getFullYear()} Ethereum Lima.`,
+      copyright: `© ${new Date().getFullYear()} Ethereum Lima. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

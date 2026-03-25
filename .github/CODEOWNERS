@@ -1,0 +1,15 @@
+# CODEOWNERS for Ethereum Lima Academy
+
+# Default owners for everything
+* @ethlima/core
+
+# Specific domain owners
+/docs/rutas/ @ethlima/equipo-aprendizaje
+/docs/cursos/ @ethlima/equipo-cursos
+/docs/recursos/ @ethlima/equipo-recursos
+
+# Technical owners
+/src/ @ethlima/equipo-tecnico
+/tests/ @ethlima/equipo-tecnico
+/tailwind.config.ts @ethlima/equipo-tecnico
+/docusaurus.config.ts @ethlima/equipo-tecnico
