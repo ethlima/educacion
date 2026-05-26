@@ -229,6 +229,22 @@ export default function Home(): ReactNode {
             </div>
           </div>
 
+          {/* Aliados Section */}
+          <div className="mb-32 text-center">
+            <h2 className="text-3xl font-black mb-8 dark:text-white">
+              Aliados
+            </h2>
+            <div className="flex justify-center">
+              <div className="bg-white border border-slate-200 dark:border-slate-800 rounded-2xl p-6 max-w-[280px] w-full flex items-center justify-center transition-all hover:scale-105 hover:border-ethlima-blue/30 shadow-md">
+                <img
+                  src={useBaseUrl('/img/escuela-posgrado-usil.svg')}
+                  alt="Escuela de Posgrado USIL"
+                  className="h-16 w-auto object-contain"
+                />
+              </div>
+            </div>
+          </div>
+
           {/* CTA Banner Section */}
           <div className="relative rounded-3xl overflow-hidden bg-ethlima-blue p-12 md:p-20 text-center shadow-2xl shadow-ethlima-blue/20">
             <div className="absolute top-0 right-0 -mt-20 -mr-20 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
